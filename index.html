@@ -19,12 +19,12 @@
     <div class="counter-container">
       <p>
         <span id="counter" 
-              hx-get="http://kovaqa.pythonanywhere.com/api/get-counter" 
+              hx-get="https://kovaqa.pythonanywhere.com/api/get-counter" 
               hx-trigger="load" 
               hx-swap="innerHTML">Loading...</span>
       </p>
     </div>
-    <button id="button" hx-post="http://kovaqa.pythonanywhere.com/api/increment-counter" hx-target="#counter" hx-swap="innerHTML" hx-trigger="click">
+    <button id="button" hx-post="https://kovaqa.pythonanywhere.com/api/increment-counter" hx-target="#counter" hx-swap="innerHTML" hx-trigger="click">
       <span class="button-text">Putear</span>
       <span class="animated-text">La concha de tu madre EDET!</span>
     </button>
