@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="htmx-config" content='{"selfRequestsOnly":false}'>
+    <script src="https://unpkg.com/htmx.org@2.0.3"   
+    integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <title>Suciedad Aguas del Tucumán</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logomockblue.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"   
+    rel="stylesheet">
+</head>
+<body hx-get="https://kovaqa.pythonanywhere.com/api/get-colour" hx-trigger="load" hx-swap="innerHTML" hx-target="#color-code">
+    <div id="introduction">Paleta de colores SAT</div>
+    <div id="subintro">Suciedad Aguas de Tucumán</div>
+    <div id="color-display" hx-swap-oob="true">
+        <p id="color-code">...</p>
+    </div>
+    <script>
+        document.addEventListener('htmx:afterSwap', function (event) {
+            if (event.target.id === 'color-code') {
+                const hexCode = event.target.textContent.trim();
+                document.body.style.backgroundColor = hexCode;
+
+                const luminance = calculateLuminance(hexCode);
+                const textColor = luminance > 0.5 ? '#000000' : '#FFFFFF';
+                event.target.style.color = textColor;
+                document.body.style.color = textColor;
+                event.target.style.textShadow = luminance > 0.5 ? '0 0 10px rgba(0, 0, 0, 0.4)' : '0 0 10px rgba(255, 255, 255, 0.4)';
+                
+                const footer = document.querySelector('footer');
+                footer.style.color = textColor === '#000000' ? '#000000a5' : '#dddddd5e';
+                
+                const logo = document.querySelector('.logo')
+                logo.style.opacity = 0;
+                logo.src = textColor === '#000000' ? 'logomockblue.png' : 'logomock.png';
+                logo.onload = () => {
+                    logo.style.opacity = 1;
+                }
+
+                if (hexCode === "#ffffff"){
+                    const subtext = document.querySelector('#subtext')
+                    subtext.textContent = 'Felicidades! Lograste conseguir agua limpia!'
+                    subtext.style.fontSize = '1.7rem'
+                    startConfetti();
+                }
+            }
+        });
+
+        function calculateLuminance(hex) {
+            hex = hex.replace('#', '');
+            const r = parseInt(hex.substring(0, 2), 16) / 255;
+            const g = parseInt(hex.substring(2, 4), 16) / 255;
+            const b = parseInt(hex.substring(4, 6), 16) / 255;
+
+            const a = [r, g, b].map((v) =>
+                v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)
+            );
+
+            return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+        }
+        function startConfetti() {
+            confetti({
+                particleCount:250,
+                spread: 4000,         
+                origin: { x: 0.5, y: 0.5}, 
+                colors: ['#FF0000', '#00ABFF', '#00FFFF'],
+                duration: 15000, 
+                scalar: 1.5,
+            });
+        }
+    </script>
+    <div id="subtext">Al cargar la página, se generará un nuevo color, basado en muestras de agua tomadas entre el 22 nov 2013 y el 27 nov 2024 en el barrio Ciudadela.</div>
+    <div id="logoarea">
+        <img src="logomockloading.png" alt="Te imaginas me como una demanda por usar este logo?" class="logo">
+        <div class="text-content">
+          Estos colores son parte de la diversa gama de colores que podés encontrar al abrir la canilla en la ciudad de San Miguel de Tucumán. 
+          <br><br>Disfrutá tu agua, ahora con extra sedimento!
+        </div>
+      </div>
+<footer class="footer">
+    © Kovadev, 2024. Hacemos lo que a nadie le interesa hacer, y a veces funciona
+</footer></body>
+</html>
