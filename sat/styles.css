@@ -9,7 +9,7 @@
     color: #f2f2f2;
     overflow-x: hidden;
     margin: 0; 
-    height: 90vh;
+    height: 92vh;
     width: 100%;
     transition: background-color 0.5s ease;
   }
@@ -83,7 +83,7 @@
 
     #introduction{
       font-size: 8vw;
-      margin-top: 1vh;
+      margin-top: 5vh;
     }
   
     #subintro{
