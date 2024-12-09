@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="htmx-config" content='{"selfRequestsOnly":false}'>
+  <meta name="description" content="El servicio eléctrico en Tucumán es un desastre, pero en momentos como éstos, sólo se pude putear. Entrá y hacé catarsis.">
+  <script src="https://unpkg.com/htmx.org@2.0.3"   
+ integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+  <title>EDET SA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"   
+ rel="stylesheet">
+</head>
+<body>
+  <span id="qrcounter" 
+              hx-post="https://kovaqa.pythonanywhere.com/api/increment-qr-counter" 
+              hx-trigger="load"></span>
+            </p>
+  <div class="container">
+    <h1>Bienvenidx</h1>
+    <p>No podemos prevenir los cortes de luz, pero podemos hacer catarsis</p>
+    <div class="counter-container">
+      <p>
+        <span id="counter" 
+              hx-get="https://kovaqa.pythonanywhere.com/api/get-counter" 
+              hx-trigger="load" 
+              hx-swap="innerHTML">...</span>
+              <br>puteadas colectivas
+            </p>
+    </div>
+    <button id="button" hx-post="https://kovaqa.pythonanywhere.com/api/increment-counter" hx-target="#counter" hx-swap="innerHTML" hx-trigger="click">
+      <span class="button-text">Putear</span>
+      <span class="animated-text">La concha de tu madre EDET!</span>
+    </button>
+    <img src="EDET.png" alt="Logo" class="logo">
+  </div>
+  <footer class="footer">
+    © Kovadev, 2024. Hacemos lo que a nadie le interesa hacer, y a veces funciona
+  </footer>
+</body>
+</html>
