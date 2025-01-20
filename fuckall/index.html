@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El servicio eléctrico en Argentina es un desastre, pero en momentos como éstos, sólo se pude putear. Entrá y hacé catarsis, más federal que nunca.">
+  <title>Me cortaron la luz</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="/fuckall/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700"   
+ rel="stylesheet">
+</head>
+<body>
+  <div class="containerr">
+    <img src="./fuckall/mcll_blanco_turquesa_frase.png" alt="MCLL Logo" class="header-logo">
+  <div class="container">
+    <h1>Bienvenidx</h1>
+    <p>No podemos prevenir los cortes de luz, pero podemos hacer catarsis
+    <br><br>Buscá tu proveedor de energía eléctrica por provincia, y emití una suave y humilde queja</p>
+    <select id="provincia-select">
+      <option value="todas">Todas</option>
+      <option value="caba">CABA/GBA</option>
+      <option value="ba">Buenos Aires</option>
+      <option value="ca">Catamarca</option>
+      <option value="ch">Chaco</option>
+      <option value="co">Córdoba</option>
+      <option value="cr">Corrientes</option>
+      <option value="er">Entre Ríos</option>
+      <option value="fo">Formosa</option>
+      <option value="ju">Jujuy</option>
+      <option value="lr">La Rioja</option>
+      <option value="mz">Mendoza</option>
+      <option value="mi">Misiones</option>
+      <option value="rn">Río Negro</option>
+      <option value="sa">Salta</option>
+      <option value="sj">San Juan</option>
+      <option value="sl">San Luis</option>
+      <option value="sf">Santa Fé</option>
+      <option value="se">Santiago del Estero</option>
+      <option value="tf">Tierra del Fuego</option>
+      <option value="tu">Tucumán</option>
+    </select>
+    
+    <div class="grid-container">
+      <div class="grid-item" id="edesur" data-provincia="caba">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edesur" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDESUR!</span>
+        </button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Edesur_logo22.png" alt="Edesur" class="logo">
+      </div>
+      <!-- Repite .grid-item según sea necesario -->
+      <div class="grid-item" id="edenor" data-provincia="caba">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edenor" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDENOR!</span>
+        </button>
+        <img src="https://www.edenor.com/themes/custom/edenor/logo.svg" alt="Edenor" class="logo">
+      </div>
+
+      <div class="grid-item" id="edea" data-provincia="ba">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edea" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDEA!</span>
+        </button>
+        <img src="https://www.edeaweb.com.ar/wp-content/uploads/2023/10/Edea-blanco.png" alt="edea" class="logo">
+      </div>
+
+      <div class="grid-item" id="eden" data-provincia="ba">
+        <div class="counter-container">
+          <p>
+            <span id="counter-eden" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDEN!</span>
+        </button>
+        <img src="https://www.edensa.com.ar/wp-content/uploads/2023/10/EDEN-logo-blanco-300x101.png" alt="Eden" class="logo">
+        </div>
+
+      <div class="grid-item" id="edes" data-provincia="ba">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edes" class="counter-1">...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDES!</span>
+        </button>
+        <img src="https://www.infoedes.com/wp-content/uploads/2023/10/Edes-blanco.png" alt="Edes" class="logo">
+      </div>
+
+      <div class="grid-item" id="edelap" data-provincia="ba">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edelap" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDELAP!</span>
+        </button>
+        <img src="https://www.edelap.com.ar/wp-content/uploads/2023/10/EDELAP-logo.png" alt="Edelap" class="logo">
+      </div>
+
+      <div class="grid-item" id="ecsapem" data-provincia="ca">
+        <div class="counter-container">
+          <p>
+            <span id="counter-ecsapem" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre ECSAPEM!</span>
+        </button>
+        <img src="https://oficina-virtual.ecsapem.com.ar/img/logo%20SERVICIO.png" alt="ecsapem" class="logo">
+      </div>
+
+      <div class="grid-item" id="secheep" data-provincia="ch">
+        <div class="counter-container">
+          <p>
+            <span id="counter-secheep" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+  <span class="button-text">Putear</span>
+  <span class="animated-text">La concha de tu madre SECHEEP!</span>
+</button>
+        <img src="https://new.secheep.com/wp-content/uploads/2020/07/logo03.png" alt="secheep" class="logo">
+      </div>
+
+      <div class="grid-item" id="epec" data-provincia="co">
+        <div class="counter-container">
+          <p>
+            <span id="counter-epec" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EPEC!</span>
+        </button>
+        <img src="https://www.epec.com.ar/assets/template/images/footer/logo-footer.png" alt="epec" class="logo">
+      </div>
+
+      <div class="grid-item" id="dpec"data-provincia="cr">
+        <div class="counter-container">
+          <p>
+            <span id="counter-dpec" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre DPEC!</span>
+        </button>
+        <img src="https://www.dpec.com.ar/recursos/DPEC/css/lib/imagenes/iconos/Dpec-small.png" alt="dpec" class="logo">
+      </div>
+
+      <div class="grid-item" id="enersa" data-provincia="er">
+        <div class="counter-container">
+          <p>
+            <span id="counter-enersa" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre ENERSA!</span>
+        </button>
+        <img src="https://www.enersa.com.ar/wp-content/uploads/2024/10/1111-5-1.png" alt="enersa" class="logo">
+      </div>
+
+      <div class="grid-item" id="refsa" data-provincia="fo">
+        <div class="counter-container">
+          <p>
+            <span id="counter-refsa" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre REFSA!</span>
+        </button>
+        <img src="https://www.recursosyenergia.com.ar/_res/images/logo_web.png" alt="refsa" class="logo">
+      </div>
+
+      <div class="grid-item" id="ejesa" data-provincia="ju">
+        <div class="counter-container">
+          <p>
+            <span id="counter-ejesa" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EJE SA!</span>
+        </button>
+        <img src="https://www.ejesa.com.ar/info/pwa/Content/Images/LOGOEJESAAZUL.png" alt="ejesa" class="logo">
+      </div>
+
+      <div class="grid-item" id="edelar" data-provincia="lr">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edelar" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDELAR!</span>
+        </button>
+        <img src="edelar.png" alt="edelar" class="logo">
+      </div>
+
+      <div class="grid-item" id="edemsa" data-provincia="mz">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edemsa" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDEMSA!</span>
+        </button>
+        <img src="https://www.edemsa.com/wp-content/uploads/2024/02/logo-edemsa.png" alt="edemsa" class="logo">
+      </div>
+
+      <div class="grid-item" id="edeste" data-provincia="mz">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edeste" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDESTE!</span>
+        </button>
+        <img src="https://www.edeste.com.ar/assets/img/logo/logo-gradient.png" alt="edeste" class="logo">
+      </div>
+
+      <div class="grid-item" id="emsa" data-provincia="mi">
+        <div class="counter-container">
+          <p>
+            <span id="counter-emsa" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EMSA!</span>
+        </button>
+        <img src="https://www.energiademisiones.com.ar/wp-content/themes/emsa/images/logo_web.png" alt="emsa" class="logo">
+      </div>
+
+      <div class="grid-item" id="edersa" data-provincia="rn">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edersa" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDERSA!</span>
+        </button>
+        <img src="http://www.edersa.com.ar/wp-content/themes/altovalley/img/logo-edersa.png" alt="edersa" class="logo">
+      </div>
+
+      <div class="grid-item" id="edesa" data-provincia="sa">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edesa" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDESA!</span>
+        </button>
+        <img src="https://www.edesa.com.ar/wp-content/uploads/2023/11/Edesa-blanco.png" alt="edesa" class="logo">
+      </div>
+
+      <div class="grid-item"  id="naturgysj" data-provincia="sj">
+        <div class="counter-container">
+          <p>
+            <span id="counter-naturgysj" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre Naturgy!</span>
+        </button>
+        <img src="https://www.naturgysj.com.ar/wp-content/uploads/2024/04/Naturgy_CMYK_Principal_Positiva.svg" alt="naturgysj" class="logo">
+      </div>
+
+      <div class="grid-item" id="edesal" data-provincia="sl">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edesal" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDESAL!</span>
+        </button>
+        <img src="https://edesalenergia.com.ar/eener/image/logo.jpg" alt="edesal" class="logo">
+      </div>
+
+      <div class="grid-item" id="epesf" data-provincia="sf">
+        <div class="counter-container">
+          <p>
+            <span id="counter-epesf" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EPE!</span>
+        </button>
+        <img src="https://www.epe.santafe.gov.ar/institucional/img/logoEPE2.svg" alt="epesf" class="logo">
+      </div>
+
+      <div class="grid-item" id="edese" data-provincia="se">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edese" class="counter-1" 
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDESE!</span>
+        </button>
+        <img src="https://edese.com.ar/_nuxt/img/logo.0f590b7.png" alt="edese" class="logo">
+      </div>
+
+      <div class="grid-item" id="epetdf" data-provincia="tf">
+        <div class="counter-container">
+          <p>
+            <span id="counter-epetdf" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EPE!</span>
+        </button>
+        <img src="https://www.epe.santafe.gov.ar/institucional/img/logoEPE2.svg" alt="epetdf" class="logo">
+      </div>
+
+      <div class="grid-item" id="edet" data-provincia="tu">
+        <div class="counter-container">
+          <p>
+            <span id="counter-edet" class="counter-1" 
+                  
+                  
+                  >...</span>
+                  <br>puteadas colectivas
+          </p>
+        </div>
+        <button class="putear-button" type="button">
+          <span class="button-text">Putear</span>
+          <span class="animated-text">La concha de tu madre EDET!</span>
+        </button>
+        <img src="https://www.edetsa.com/info/pwa/Content/Images/isologotipo-edet-sin-slogan-f.svg" alt="edet" class="logo">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    © Kovadev, 2024. Hacemos lo que a nadie le interesa hacer, y a veces funciona
+  </footer>
+ 
+  <script src="iniLoad.js" defer></script>
+  <script src="proviHandler.js" defer></script>
+  <script src="buttonHandler.js" defer></script>
+</body>
+</html>
